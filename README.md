@@ -15,4 +15,7 @@
 
 </h4>
 
+<!-- 插入图片 -->
+<img src="your_image.png" alt="Overview Figure" width="600">
+
 </div>
