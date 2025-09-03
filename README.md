@@ -5,7 +5,7 @@
 <h4 align="center"> 
 
 [Junjie Chen]()<sup>1*</sup>,
-[Xuyang Liu](https://xuyang-liu16.github.io/)<sup>1*†</sup>,
+[Xuyang Liu](https://xuyang-liu16.github.io/)<sup>1*,†</sup>,
 [Zichen Wen](https://scholar.google.com/citations?hl=en&user=N-aPFvEAAAAJ)<sup>2</sup>,
 [Yiyu Wang]()<sup>2</sup>,
 [Siteng Huang](https://kyonhuang.top/)<sup>3</sup>,
@@ -19,7 +19,7 @@
 
 ## 🔥 News
 
-* **`2025.08.27`** 🤗🤗 We release our latest work [V<sup>2</sup>Drop](https://github.com/xuyang-liu16/V2Drop), a variation-aware vision token dropping method for plug-and-play inference LVLM acceleration. [Code](https://github.com/xuyang-liu16/V2Drop) is available!
+* **`2025.08.27`** 🤗🤗 We release our latest work [V<sup>2</sup>Drop](https://arxiv.org/abs/2509.01552), a variation-aware vision token dropping method for plug-and-play inference LVLM acceleration. [Code](https://github.com/xuyang-liu16/V2Drop) is available!
 
 
 <p align="center"> <img src="images/motivation.png" width="1000" align="center"> </p>
@@ -70,4 +70,20 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/v1_5/eval/textvqa.sh
 Example for evaluating MME results:
 ```
 CUDA_VISIBLE_DEVICES=0 bash scripts/v1_5/eval/mme.sh
+```
+
+## 📌 Citation
+
+Please consider citing our paper in your publications, if our findings help your research.
+
+```bibtex
+@misc{chen2025variationawarevisiontokendropping,
+      title={Variation-aware Vision Token Dropping for Faster Large Vision-Language Models}, 
+      author={Junjie Chen and Xuyang Liu and Zichen Wen and Yiyu Wang and Siteng Huang and Honggang Chen},
+      year={2025},
+      eprint={2509.01552},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.01552}, 
+}
 ```
