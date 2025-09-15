@@ -36,7 +36,7 @@ The core implementation of our code is in [`llava/model/language_model/V2Drop.py
 
 ```bash
 git clone https://github.com/xuyang-liu16/V2Drop
-cd DART
+cd V2Drop
 ```
 
 2. Environment Setup and Preparation
