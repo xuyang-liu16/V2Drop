@@ -20,7 +20,7 @@
 ## 🔥 News
 
 
-* **`2026.02.21`** 🎊🎊 Our [V<sup>2</sup>Drop](https://arxiv.org/abs/2509.01552) have been accepted by **CVPR 2026**! 
+* **`2026.02.21`** 🎊🎊 Our [V<sup>2</sup>Drop](https://arxiv.org/abs/2509.01552) has been accepted by **CVPR 2026**! 
 * **`2025.08.27`** 🤗🤗 We release our latest work [V<sup>2</sup>Drop](https://arxiv.org/abs/2509.01552), a variation-aware vision token dropping method for plug-and-play inference LVLM acceleration. [Code](https://github.com/xuyang-liu16/V2Drop) is available!
 
 
