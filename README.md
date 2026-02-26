@@ -26,7 +26,7 @@
 
 <p align="center"> <img src="images/motivation.png" width="1000" align="center"> </p>
 
-> **TLDR:** Token-wise variation intuitively reflects vision token importance (green boxes) while maintaining compatibility with efficient operators. Thus, we present VidCom<sup>2</sup>, a plug-and-play framework that measures token-wise variation across adjacent LLM layers and progressively drops vision tokens with minimal variation, thereby achieving plug-and-play inference acceleration.
+> **TLDR:** Token-wise variation intuitively reflects vision token importance (green boxes) while maintaining compatibility with efficient operators. Thus, we present V<sup>2</sup>Drop, a plug-and-play framework that measures token-wise variation across adjacent LLM layers and progressively drops vision tokens with minimal variation, thereby achieving plug-and-play inference acceleration.
 
 ## 💥 Core Codes
 
