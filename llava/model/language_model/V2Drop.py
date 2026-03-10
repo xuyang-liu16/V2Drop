@@ -133,7 +133,7 @@ class V2DropLlamaModel(LlamaModel):
                     current_candidates = current_hidden_states[:, candidate_indices, :]
                     prev_candidates = self.prev_hidden_states[:, candidate_indices, :]
 
-                    cos_sim_candidate = F.cosine_similarity(current_candidates, prev_candidates, dim=-1)[0]
+                    l2_diff_candidate = torch.norm(current_candidates - prev_candidates, p=2, dim=-1)[0]
 
                     current_layer = decoder_layer.self_attn.layer_idx
                     if current_layer == 3:
@@ -144,7 +144,7 @@ class V2DropLlamaModel(LlamaModel):
                         keep_ratio = 0
 
                     k = max(1, int(self.image_token_amount_after_selection * keep_ratio))
-                    topk_values, topk_indices = torch.topk(cos_sim_candidate, k=k, largest=False)
+                    topk_values, topk_indices = torch.topk(l2_diff_candidate, k=k, largest=True)
                     selected_indices = candidate_indices[topk_indices]
                     current_seq_length = current_hidden_states.size(1)
                     keep_indexs = torch.cat((torch.arange(35, device=device), selected_indices, torch.arange(self.image_token_amount_after_selection + 35, current_seq_length, device=device)))
