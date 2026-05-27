@@ -49,6 +49,7 @@ cd V2Drop
  pip install -e .
  pip install flash-attn --no-build-isolation
 ```
+
 3. Modify Rotary Embedding in Transformers
 
 Find `modeling_llama.py` in your conda environment:
@@ -63,6 +64,7 @@ cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
 with:
 ```python
 cos, sin = self.rotary_emb(value_states, seq_len=position_ids.max().item() + 1)
+```
 
 4. Download Multimodal Benchmark
 
