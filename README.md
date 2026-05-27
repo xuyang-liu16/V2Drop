@@ -49,12 +49,26 @@ cd V2Drop
  pip install -e .
  pip install flash-attn --no-build-isolation
 ```
+3. Modify Rotary Embedding in Transformers
 
-3. Download Multimodal Benchmark
+Find `modeling_llama.py` in your conda environment:
+```bash
+find ~/anaconda3/envs/V2Drop -name "modeling_llama.py" -path "*/llama/*"
+```
+
+Then replace all three occurrences of:
+```python
+cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
+```
+with:
+```python
+cos, sin = self.rotary_emb(value_states, seq_len=position_ids.max().item() + 1)
+
+4. Download Multimodal Benchmark
 
 Please follow the detailed instruction in [LLaVA-Evaluation](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md).
 
-4. Download [LLaVA-1.5-7B](https://huggingface.co/liuhaotian/llava-v1.5-7b) and put them under `./liuhaotian/llava-v1.5-7b`.
+5. Download [LLaVA-1.5-7B](https://huggingface.co/liuhaotian/llava-v1.5-7b) and put them under `./liuhaotian/llava-v1.5-7b`.
 
 > For users with limited access to Hugging Face (e.g., from mainland China), you can refer to this you can refer this [alternative guide](https://cloud.baidu.com/article/3251091) and use the following command, with LLaVA-1.5-7B as an example:
 ```
