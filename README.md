@@ -50,14 +50,7 @@ cd V2Drop
  pip install flash-attn --no-build-isolation
 ```
 
-3. Modify Rotary Embedding in Transformers
-
-Find `modeling_llama.py` in your conda environment:
-```bash
-find ~/anaconda3/envs/V2Drop -name "modeling_llama.py" -path "*/llama/*"
-```
-
-Then replace all three occurrences of:
+3. Go to your `transformers/src/transformers/models/llama/modeling_llama.py` in the conda envs, change all three
 ```python
 cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
 ```
